@@ -36,3 +36,8 @@ let products = [
     name: 'Cabbages',
     category: 'vegetable'
 }]
+getproducts()
+let product = document.getElementById('products')
+let li = document.createElement('li')
+li.appendChild(document.createTextNode(products))
+product.append(li)

@@ -1,9 +1,30 @@
+const { METHODS, get } = require("http");
+
 function getproducts(){
     fetch('localhost:5000/products')
     .then((response) => response.json())
     .then((data) => console.log(data));
 }
-getproducts()
+getproducts();
+
+function getfruits() {
+    fetch('localhost:5000/products/fruits')
+    .then((response)=> response.json())
+    let FruitListCategory = products.find(product.category == 'fruits')
+    return FruitListCategory
+    .then ((FruitListCategory) => console.log(FruitListCategory))
+}
+getfruits();
+
+
+function getVegitables() {
+    fetch('localhost:5000/products/vegetables')
+    .then((response)=> response.json())
+    let VegListCategory = products.find(product.category == 'vegetables')
+    return VegListCategory
+    .then ((VegListCategory) => console.log(VegListCategory))
+}
+getVegitables();
 
 
 // let products = [];
@@ -23,6 +44,5 @@ getproducts()
 // `;
 //       }
 //     });
-
 
 
